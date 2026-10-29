@@ -1,0 +1,1225 @@
+{
+  "name": "GPIO_IOToggle",
+  "source_ide": "STM32CubeIDE",
+  "path": "/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE",
+  "languages": [
+      "C"
+  ],
+  "configurations": [
+    {
+      "name": "XIP_QSPI_InternalSRAM_Debug",
+      "output_filename": "GPIO_IOToggle",
+      "type": "Executable",
+      "toolchain_type": "GCC",
+      "toolchain_prefix": "arm-none-eabi-",
+      "mcu": "STM32H750XBHx",
+      "board": "STM32H750B-DK",
+      "sources": [
+        { "path": "../readme.txt" },
+        { "path": "../Src/system_stm32h7xx.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sd.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_sdmmc.c" },
+        { "path": "Example/Startup/startup_stm32h750xbhx.s" },
+        { "path": "../Src/main.c" },
+        { "path": "../Src/stm32h7xx_hal_msp.c" },
+        { "path": "../Src/stm32h7xx_it.c" },
+        { "path": "Example/User/syscalls.c" },
+        { "path": "Example/User/sysmem.c" }
+      ],
+      "tools": [
+            {
+              "type": "c_assembler",
+              "options": {
+                      "option.debuglevel": "-g3",
+                      "option.definedsymbols": "-DDEBUG",
+                      "option.preprocessassembler": "-x assembler-with-cpp"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-g3",
+                  "-DDEBUG",
+                  "-x",
+                  "assembler-with-cpp"
+              ]
+            },
+            {
+              "type": "c_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu11",
+                      "option.debuglevel": "-g3",
+                      "option.definedsymbols": "-DDEBUG, -DAPPLICATION_ADDRESS=0x90000000U, -DUSE_HAL_DRIVER, -DUSE_PWR_LDO_SUPPLY, -DUSE_PWR_LDO_SUPPLY, -D STM32H750xx, -DUSE_STM32H750B_DISCO",
+                      "option.includepaths": "-I../../Inc, -I../../../../../../../Drivers/CMSIS/Include, -I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include, -I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc, -I../../../../../../../Drivers/BSP/STM32H750B-DK, -I../../../../../../../Drivers/BSP/Components/Common, -I../../../../../../../Utilities/Fonts, -I../../../../../../../Utilities/CPU",
+                      "option.optimization.level": "-O0",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu11",
+                  "-g3",
+                  "-DDEBUG",
+                  "-DAPPLICATION_ADDRESS=0x90000000U",
+                  "-DUSE_HAL_DRIVER",
+                  "-DUSE_PWR_LDO_SUPPLY",
+                  "-D STM32H750xx",
+                  "-DUSE_STM32H750B_DISCO",
+                  "-I../../Inc",
+                  "-I../../../../../../../Drivers/CMSIS/Include",
+                  "-I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+                  "-I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc",
+                  "-I../../../../../../../Drivers/BSP/STM32H750B-DK",
+                  "-I../../../../../../../Drivers/BSP/Components/Common",
+                  "-I../../../../../../../Utilities/Fonts",
+                  "-I../../../../../../../Utilities/CPU",
+                  "-O0",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "cpp_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu++14",
+                      "option.debuglevel": "-g3",
+                      "option.optimization.level": "-O0",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.noexceptions": "-fno-exceptions",
+                      "option.nortti": "-fno-rtti",
+                      "option.nousecxaatexit": "-fno-use-cxa-atexit",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu++14",
+                  "-g3",
+                  "-O0",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-fno-exceptions",
+                  "-fno-rtti",
+                  "-fno-use-cxa-atexit",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "c_linker",
+              "options": {
+                      "option.script": "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/QSPIflash_InternalSRAM.ld\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/QSPIflash_InternalSRAM.ld\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "cpp_linker",
+              "options": {
+                      "option.script": "-T\"\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "c_archiver",
+              "options": {
+                      "option.replace": "-r"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-r"
+              ]
+            }
+        ]
+    },
+    {
+      "name": "XIP_QSPI_InternalSRAM_Release",
+      "output_filename": "GPIO_IOToggle",
+      "type": "Executable",
+      "toolchain_type": "GCC",
+      "toolchain_prefix": "arm-none-eabi-",
+      "mcu": "STM32H750XBHx",
+      "board": "STM32H750B-DK",
+      "sources": [
+        { "path": "../readme.txt" },
+        { "path": "../Src/system_stm32h7xx.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sd.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_sdmmc.c" },
+        { "path": "Example/Startup/startup_stm32h750xbhx.s" },
+        { "path": "../Src/main.c" },
+        { "path": "../Src/stm32h7xx_hal_msp.c" },
+        { "path": "../Src/stm32h7xx_it.c" },
+        { "path": "Example/User/syscalls.c" },
+        { "path": "Example/User/sysmem.c" }
+      ],
+      "tools": [
+            {
+              "type": "c_assembler",
+              "options": {
+                      "option.preprocessassembler": "-x assembler-with-cpp"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-x",
+                  "assembler-with-cpp"
+              ]
+            },
+            {
+              "type": "c_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu11",
+                      "option.definedsymbols": "-DAPPLICATION_ADDRESS=0x90000000U, -DUSE_HAL_DRIVER, -DUSE_PWR_LDO_SUPPLY, -DUSE_PWR_LDO_SUPPLY, -D STM32H750xx, -DUSE_STM32H750B_DISCO",
+                      "option.includepaths": "-I../../Inc, -I../../../../../../../Drivers/CMSIS/Include, -I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include, -I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc, -I../../../../../../../Drivers/BSP/STM32H750B-DK, -I../../../../../../../Drivers/BSP/Components/Common, -I../../../../../../../Utilities/Fonts, -I../../../../../../../Utilities/CPU",
+                      "option.optimization.level": "-Os",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu11",
+                  "-DAPPLICATION_ADDRESS=0x90000000U",
+                  "-DUSE_HAL_DRIVER",
+                  "-DUSE_PWR_LDO_SUPPLY",
+                  "-D STM32H750xx",
+                  "-DUSE_STM32H750B_DISCO",
+                  "-I../../Inc",
+                  "-I../../../../../../../Drivers/CMSIS/Include",
+                  "-I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+                  "-I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc",
+                  "-I../../../../../../../Drivers/BSP/STM32H750B-DK",
+                  "-I../../../../../../../Drivers/BSP/Components/Common",
+                  "-I../../../../../../../Utilities/Fonts",
+                  "-I../../../../../../../Utilities/CPU",
+                  "-Os",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "cpp_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu++14",
+                      "option.optimization.level": "-Os",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.noexceptions": "-fno-exceptions",
+                      "option.nortti": "-fno-rtti",
+                      "option.nousecxaatexit": "-fno-use-cxa-atexit",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu++14",
+                  "-Os",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-fno-exceptions",
+                  "-fno-rtti",
+                  "-fno-use-cxa-atexit",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "c_linker",
+              "options": {
+                      "option.script": "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/QSPIflash_InternalSRAM.ld\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/QSPIflash_InternalSRAM.ld\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "cpp_linker",
+              "options": {
+                      "option.script": "-T\"\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "c_archiver",
+              "options": {
+                      "option.replace": "-r"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-r"
+              ]
+            }
+        ]
+    },
+    {
+      "name": "BootROM_ExternalSDRAM_InternalSRAM_Debug",
+      "output_filename": "GPIO_IOToggle",
+      "type": "Executable",
+      "toolchain_type": "GCC",
+      "toolchain_prefix": "arm-none-eabi-",
+      "mcu": "STM32H750XBHx",
+      "board": "STM32H750B-DK",
+      "sources": [
+        { "path": "../readme.txt" },
+        { "path": "../Src/system_stm32h7xx.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sd.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_sdmmc.c" },
+        { "path": "Example/Startup/startup_stm32h750xbhx.s" },
+        { "path": "../Src/main.c" },
+        { "path": "../Src/stm32h7xx_hal_msp.c" },
+        { "path": "../Src/stm32h7xx_it.c" },
+        { "path": "Example/User/syscalls.c" },
+        { "path": "Example/User/sysmem.c" }
+      ],
+      "tools": [
+            {
+              "type": "c_assembler",
+              "options": {
+                      "option.debuglevel": "-g3",
+                      "option.definedsymbols": "-DDEBUG",
+                      "option.preprocessassembler": "-x assembler-with-cpp"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-g3",
+                  "-DDEBUG",
+                  "-x",
+                  "assembler-with-cpp"
+              ]
+            },
+            {
+              "type": "c_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu11",
+                      "option.debuglevel": "-g3",
+                      "option.definedsymbols": "-DDEBUG, -DSTM32H750xx, -DUSE_HAL_DRIVER, -DUSE_PWR_LDO_SUPPLY, -DUSE_PWR_LDO_SUPPLY, -DUSE_EXTERNAL_SDRAM, -DUSE_IOEXPANDER, -DUSE_STM32H750B_DISCO, -DAPPLICATION_ADDRESS=0xD0000000U",
+                      "option.includepaths": "-I../../Inc, -I../../../../../../../Drivers/CMSIS/Include, -I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include, -I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc, -I../../../../../../../Drivers/BSP/STM32H750B-DK, -I../../../../../../../Drivers/BSP/Components/Common, -I../../../../../../../Utilities/Fonts, -I../../../../../../../Utilities/CPU",
+                      "option.optimization.level": "-O0",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu11",
+                  "-g3",
+                  "-DDEBUG",
+                  "-DSTM32H750xx",
+                  "-DUSE_HAL_DRIVER",
+                  "-DUSE_PWR_LDO_SUPPLY",
+                  "-DUSE_EXTERNAL_SDRAM",
+                  "-DUSE_IOEXPANDER",
+                  "-DUSE_STM32H750B_DISCO",
+                  "-DAPPLICATION_ADDRESS=0xD0000000U",
+                  "-I../../Inc",
+                  "-I../../../../../../../Drivers/CMSIS/Include",
+                  "-I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+                  "-I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc",
+                  "-I../../../../../../../Drivers/BSP/STM32H750B-DK",
+                  "-I../../../../../../../Drivers/BSP/Components/Common",
+                  "-I../../../../../../../Utilities/Fonts",
+                  "-I../../../../../../../Utilities/CPU",
+                  "-O0",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "cpp_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu++14",
+                      "option.debuglevel": "-g3",
+                      "option.optimization.level": "-O0",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.noexceptions": "-fno-exceptions",
+                      "option.nortti": "-fno-rtti",
+                      "option.nousecxaatexit": "-fno-use-cxa-atexit",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu++14",
+                  "-g3",
+                  "-O0",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-fno-exceptions",
+                  "-fno-rtti",
+                  "-fno-use-cxa-atexit",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "c_linker",
+              "options": {
+                      "option.script": "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/ExternalSDRAM_InternalSRAM.ld\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/ExternalSDRAM_InternalSRAM.ld\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "cpp_linker",
+              "options": {
+                      "option.script": "-T\"\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "c_archiver",
+              "options": {
+                      "option.replace": "-r"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-r"
+              ]
+            }
+        ]
+    },
+    {
+      "name": "BootROM_ExternalSDRAM_InternalSRAM_Release",
+      "output_filename": "GPIO_IOToggle",
+      "type": "Executable",
+      "toolchain_type": "GCC",
+      "toolchain_prefix": "arm-none-eabi-",
+      "mcu": "STM32H750XBHx",
+      "board": "STM32H750B-DK",
+      "sources": [
+        { "path": "../readme.txt" },
+        { "path": "../Src/system_stm32h7xx.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sd.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_sdmmc.c" },
+        { "path": "Example/Startup/startup_stm32h750xbhx.s" },
+        { "path": "../Src/main.c" },
+        { "path": "../Src/stm32h7xx_hal_msp.c" },
+        { "path": "../Src/stm32h7xx_it.c" },
+        { "path": "Example/User/syscalls.c" },
+        { "path": "Example/User/sysmem.c" }
+      ],
+      "tools": [
+            {
+              "type": "c_assembler",
+              "options": {
+                      "option.preprocessassembler": "-x assembler-with-cpp"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-x",
+                  "assembler-with-cpp"
+              ]
+            },
+            {
+              "type": "c_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu11",
+                      "option.definedsymbols": "-DSTM32H750xx, -DUSE_HAL_DRIVER, -DUSE_PWR_LDO_SUPPLY, -DUSE_PWR_LDO_SUPPLY, -DUSE_EXTERNAL_SDRAM, -DUSE_IOEXPANDER, -DUSE_STM32H750B_DISCO, -DAPPLICATION_ADDRESS=0xD0000000U",
+                      "option.includepaths": "-I../../Inc, -I../../../../../../../Drivers/CMSIS/Include, -I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include, -I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc, -I../../../../../../../Drivers/BSP/STM32H750B-DK, -I../../../../../../../Drivers/BSP/Components/Common, -I../../../../../../../Utilities/Fonts, -I../../../../../../../Utilities/CPU",
+                      "option.optimization.level": "-Os",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu11",
+                  "-DSTM32H750xx",
+                  "-DUSE_HAL_DRIVER",
+                  "-DUSE_PWR_LDO_SUPPLY",
+                  "-DUSE_EXTERNAL_SDRAM",
+                  "-DUSE_IOEXPANDER",
+                  "-DUSE_STM32H750B_DISCO",
+                  "-DAPPLICATION_ADDRESS=0xD0000000U",
+                  "-I../../Inc",
+                  "-I../../../../../../../Drivers/CMSIS/Include",
+                  "-I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+                  "-I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc",
+                  "-I../../../../../../../Drivers/BSP/STM32H750B-DK",
+                  "-I../../../../../../../Drivers/BSP/Components/Common",
+                  "-I../../../../../../../Utilities/Fonts",
+                  "-I../../../../../../../Utilities/CPU",
+                  "-Os",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "cpp_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu++14",
+                      "option.optimization.level": "-Os",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.noexceptions": "-fno-exceptions",
+                      "option.nortti": "-fno-rtti",
+                      "option.nousecxaatexit": "-fno-use-cxa-atexit",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu++14",
+                  "-Os",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-fno-exceptions",
+                  "-fno-rtti",
+                  "-fno-use-cxa-atexit",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "c_linker",
+              "options": {
+                      "option.script": "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/ExternalSDRAM_InternalSRAM.ld\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/ExternalSDRAM_InternalSRAM.ld\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "cpp_linker",
+              "options": {
+                      "option.script": "-T\"\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "c_archiver",
+              "options": {
+                      "option.replace": "-r"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-r"
+              ]
+            }
+        ]
+    },
+    {
+      "name": "XIP_QSPI_ExternalSDRAM_Debug",
+      "output_filename": "GPIO_IOToggle",
+      "type": "Executable",
+      "toolchain_type": "GCC",
+      "toolchain_prefix": "arm-none-eabi-",
+      "mcu": "STM32H750XBHx",
+      "board": "STM32H750B-DK",
+      "sources": [
+        { "path": "../readme.txt" },
+        { "path": "../Src/system_stm32h7xx.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sd.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_sdmmc.c" },
+        { "path": "Example/Startup/startup_stm32h750xbhx.s" },
+        { "path": "../Src/main.c" },
+        { "path": "../Src/stm32h7xx_hal_msp.c" },
+        { "path": "../Src/stm32h7xx_it.c" },
+        { "path": "Example/User/syscalls.c" },
+        { "path": "Example/User/sysmem.c" }
+      ],
+      "tools": [
+            {
+              "type": "c_assembler",
+              "options": {
+                      "option.debuglevel": "-g3",
+                      "option.definedsymbols": "-DDEBUG",
+                      "option.preprocessassembler": "-x assembler-with-cpp"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-g3",
+                  "-DDEBUG",
+                  "-x",
+                  "assembler-with-cpp"
+              ]
+            },
+            {
+              "type": "c_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu11",
+                      "option.debuglevel": "-g3",
+                      "option.definedsymbols": "-DDEBUG, -DAPPLICATION_ADDRESS=0x90000000U, -DUSE_HAL_DRIVER, -DUSE_PWR_LDO_SUPPLY, -DUSE_PWR_LDO_SUPPLY, -D STM32H750xx, -DUSE_IOEXPANDER, -DUSE_STM32H750B_DISCO",
+                      "option.includepaths": "-I../../Inc, -I../../../../../../../Drivers/CMSIS/Include, -I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include, -I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc, -I../../../../../../../Drivers/BSP/STM32H750B-DK, -I../../../../../../../Drivers/BSP/Components/Common, -I../../../../../../../Utilities/Fonts, -I../../../../../../../Utilities/CPU",
+                      "option.optimization.level": "-O0",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu11",
+                  "-g3",
+                  "-DDEBUG",
+                  "-DAPPLICATION_ADDRESS=0x90000000U",
+                  "-DUSE_HAL_DRIVER",
+                  "-DUSE_PWR_LDO_SUPPLY",
+                  "-D STM32H750xx",
+                  "-DUSE_IOEXPANDER",
+                  "-DUSE_STM32H750B_DISCO",
+                  "-I../../Inc",
+                  "-I../../../../../../../Drivers/CMSIS/Include",
+                  "-I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+                  "-I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc",
+                  "-I../../../../../../../Drivers/BSP/STM32H750B-DK",
+                  "-I../../../../../../../Drivers/BSP/Components/Common",
+                  "-I../../../../../../../Utilities/Fonts",
+                  "-I../../../../../../../Utilities/CPU",
+                  "-O0",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "cpp_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu++14",
+                      "option.debuglevel": "-g3",
+                      "option.optimization.level": "-O0",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.noexceptions": "-fno-exceptions",
+                      "option.nortti": "-fno-rtti",
+                      "option.nousecxaatexit": "-fno-use-cxa-atexit",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu++14",
+                  "-g3",
+                  "-O0",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-fno-exceptions",
+                  "-fno-rtti",
+                  "-fno-use-cxa-atexit",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "c_linker",
+              "options": {
+                      "option.script": "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/QSPIflash_ExtrenalSDRAM.ld\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/QSPIflash_ExtrenalSDRAM.ld\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "cpp_linker",
+              "options": {
+                      "option.script": "-T\"\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "c_archiver",
+              "options": {
+                      "option.replace": "-r"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-r"
+              ]
+            }
+        ]
+    },
+    {
+      "name": "XIP_QSPI_ExternalSDRAM_Release",
+      "output_filename": "GPIO_IOToggle",
+      "type": "Executable",
+      "toolchain_type": "GCC",
+      "toolchain_prefix": "arm-none-eabi-",
+      "mcu": "STM32H750XBHx",
+      "board": "STM32H750B-DK",
+      "sources": [
+        { "path": "../readme.txt" },
+        { "path": "../Src/system_stm32h7xx.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sd.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.c" },
+        { "path": "../../../../../../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_sdmmc.c" },
+        { "path": "Example/Startup/startup_stm32h750xbhx.s" },
+        { "path": "../Src/main.c" },
+        { "path": "../Src/stm32h7xx_hal_msp.c" },
+        { "path": "../Src/stm32h7xx_it.c" },
+        { "path": "Example/User/syscalls.c" },
+        { "path": "Example/User/sysmem.c" }
+      ],
+      "tools": [
+            {
+              "type": "c_assembler",
+              "options": {
+                      "option.preprocessassembler": "-x assembler-with-cpp"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-x",
+                  "assembler-with-cpp"
+              ]
+            },
+            {
+              "type": "c_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu11",
+                      "option.definedsymbols": "-DAPPLICATION_ADDRESS=0x90000000U, -DUSE_HAL_DRIVER, -DUSE_PWR_LDO_SUPPLY, -DUSE_PWR_LDO_SUPPLY, -D STM32H750xx, -DUSE_IOEXPANDER, -DUSE_STM32H750B_DISCO",
+                      "option.includepaths": "-I../../Inc, -I../../../../../../../Drivers/CMSIS/Include, -I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include, -I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc, -I../../../../../../../Drivers/BSP/STM32H750B-DK, -I../../../../../../../Drivers/BSP/Components/Common, -I../../../../../../../Utilities/Fonts, -I../../../../../../../Utilities/CPU",
+                      "option.optimization.level": "-Os",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu11",
+                  "-DAPPLICATION_ADDRESS=0x90000000U",
+                  "-DUSE_HAL_DRIVER",
+                  "-DUSE_PWR_LDO_SUPPLY",
+                  "-D STM32H750xx",
+                  "-DUSE_IOEXPANDER",
+                  "-DUSE_STM32H750B_DISCO",
+                  "-I../../Inc",
+                  "-I../../../../../../../Drivers/CMSIS/Include",
+                  "-I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+                  "-I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc",
+                  "-I../../../../../../../Drivers/BSP/STM32H750B-DK",
+                  "-I../../../../../../../Drivers/BSP/Components/Common",
+                  "-I../../../../../../../Utilities/Fonts",
+                  "-I../../../../../../../Utilities/CPU",
+                  "-Os",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "cpp_compiler",
+              "options": {
+                      "option.languagestandard": "-std=gnu++14",
+                      "option.optimization.level": "-Os",
+                      "option.ffunction": "-ffunction-sections",
+                      "option.fdata": "-fdata-sections",
+                      "option.noexceptions": "-fno-exceptions",
+                      "option.nortti": "-fno-rtti",
+                      "option.nousecxaatexit": "-fno-use-cxa-atexit",
+                      "option.warnings.all": "-Wall",
+                      "option.fstackusage": "-fstack-usage",
+                      "option.cyclomaticcomplexity": "-fcyclomatic-complexity"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-std=gnu++14",
+                  "-Os",
+                  "-ffunction-sections",
+                  "-fdata-sections",
+                  "-fno-exceptions",
+                  "-fno-rtti",
+                  "-fno-use-cxa-atexit",
+                  "-Wall",
+                  "-fstack-usage",
+                  "-fcyclomatic-complexity"
+              ]
+            },
+            {
+              "type": "c_linker",
+              "options": {
+                      "option.script": "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/QSPIflash_ExtrenalSDRAM.ld\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"/home/david/STM32Cube/Repository/STM32Cube_FW_H7_V1.12.1/Projects/STM32H750B-DK/Examples/GPIO/GPIO_IOToggle/STM32CubeIDE/QSPIflash_ExtrenalSDRAM.ld\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "cpp_linker",
+              "options": {
+                      "option.script": "-T\"\"",
+                      "option.systemcalls": "--specs=nosys.specs",
+                      "option.map": "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                      "option.gcsections": "-Wl,--gc-sections",
+                      "option.static": "-static",
+                      "option.generate.secure.lib": "-Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o",
+                      "option.libmath": "-Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-T\"\"",
+                  "--specs=nosys.specs",
+                  "-Wl,-Map=\"GPIO_IOToggle.map\"",
+                  "-Wl,--gc-sections",
+                  "-static"
+              ]
+            },
+            {
+              "type": "c_archiver",
+              "options": {
+                      "option.replace": "-r"
+              },
+              "flags": [
+                  "-mfpu=fpv5-d16",
+                  "-mfloat-abi=hard",
+                  "-mthumb",
+                  "--specs=nano.specs",
+                  "-mcpu=cortex-m7",
+                  "-r"
+              ]
+            }
+        ]
+    }
+  ]
+}

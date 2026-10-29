@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Flash WeAct board (OpenOCD + Atmel-ICE)",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f", "openocd.cfg",
+                "-c", "program build/WeAct_InternalFlash_Debug/GPIO_IOToggle.elf verify reset exit"
+            ],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": []
+        }
+    ]
+}

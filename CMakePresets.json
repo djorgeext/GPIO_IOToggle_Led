@@ -1,0 +1,90 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "default",
+            "hidden": true,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}"
+        },
+        {
+            "name": "WeAct_InternalFlash_Debug",
+            "inherits": "default",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "WeAct_InternalFlash_Debug"
+            }
+        },
+        {
+            "name": "XIP_QSPI_InternalSRAM_Debug",
+            "inherits": "default",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "XIP_QSPI_InternalSRAM_Debug"
+            }
+        },
+        {
+            "name": "XIP_QSPI_InternalSRAM_Release",
+            "inherits": "default",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "XIP_QSPI_InternalSRAM_Release"
+            }
+        },
+        {
+            "name": "BootROM_ExternalSDRAM_InternalSRAM_Debug",
+            "inherits": "default",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "BootROM_ExternalSDRAM_InternalSRAM_Debug"
+            }
+        },
+        {
+            "name": "BootROM_ExternalSDRAM_InternalSRAM_Release",
+            "inherits": "default",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "BootROM_ExternalSDRAM_InternalSRAM_Release"
+            }
+        },
+        {
+            "name": "XIP_QSPI_ExternalSDRAM_Debug",
+            "inherits": "default",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "XIP_QSPI_ExternalSDRAM_Debug"
+            }
+        },
+        {
+            "name": "XIP_QSPI_ExternalSDRAM_Release",
+            "inherits": "default",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "XIP_QSPI_ExternalSDRAM_Release"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "WeAct_InternalFlash_Debug",
+            "configurePreset": "WeAct_InternalFlash_Debug"
+        },
+        {
+            "name": "XIP_QSPI_InternalSRAM_Debug",
+            "configurePreset": "XIP_QSPI_InternalSRAM_Debug"
+        },
+        {
+            "name": "XIP_QSPI_InternalSRAM_Release",
+            "configurePreset": "XIP_QSPI_InternalSRAM_Release"
+        },
+        {
+            "name": "BootROM_ExternalSDRAM_InternalSRAM_Debug",
+            "configurePreset": "BootROM_ExternalSDRAM_InternalSRAM_Debug"
+        },
+        {
+            "name": "BootROM_ExternalSDRAM_InternalSRAM_Release",
+            "configurePreset": "BootROM_ExternalSDRAM_InternalSRAM_Release"
+        },
+        {
+            "name": "XIP_QSPI_ExternalSDRAM_Debug",
+            "configurePreset": "XIP_QSPI_ExternalSDRAM_Debug"
+        },
+        {
+            "name": "XIP_QSPI_ExternalSDRAM_Release",
+            "configurePreset": "XIP_QSPI_ExternalSDRAM_Release"
+        }
+    ]
+}

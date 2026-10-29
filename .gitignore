@@ -1,0 +1,35 @@
+# Build output (CMake presets build into build/<preset>/)
+build/
+
+# STM32CubeIDE build folders, in case the project is opened there
+Debug/
+Release/
+
+# Compiler leftovers outside build/
+*.o
+*.d
+*.su
+*.cyclo
+*.map
+*.elf
+*.hex
+
+# Board's factory firmware backup (vendor binary, specific to one board).
+# Keep a copy somewhere safe, or delete this line to commit it.
+backup/
+
+# clangd index
+.cache/
+compile_commands.json
+
+# VS Code: keep shared project settings, ignore personal ones
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Editor and OS junk
+*.swp
+*~
+.DS_Store
